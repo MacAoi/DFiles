@@ -86,13 +86,12 @@
     amdgpuBusId = "PCI:6:0:0";
     sync.enable = true; # Better performace at the cost of Power Consumption
     offload = {
-     enable = false; # Only use dGPU for specific applications you mentioned
+     enable = false; # Only use dGPU for specific applications you specify
      enableOffloadCmd = false;
     };
   };
 
   #boot.kernelParams = [ "module_blacklist=amdgpu" ];#Nope!
-
 
 # === === === === === === === === === === === === === === === #
   # List packages installed in system profile. To search, run:
@@ -106,6 +105,7 @@
   pkgs.rofi-wayland
   pkgs.asusctl
   pkgs.supergfxctl
+  pkgs.brightnessctl
   pkgs.btop
   pkgs.swww
   pkgs.obsidian
@@ -113,11 +113,22 @@
   pkgs.neofetch
   pkgs.tty-clock
   pkgs.yazi
-  pkgs.xfce.thunar
-  pkgs.themix-gui
   pkgs.qbittorrent
   pkgs.vlc
   pkgs.gimp3-with-plugins
+  pkgs.vscode
+  pkgs.spotify
+  pkgs.spicetify-cli
+  pkgs.nautilus
+  pkgs.waypaper
+  pkgs.hyprlock
+  pkgs.dunst
+  pkgs.libnotify
+  pkgs.gradia
+  pkgs.flatpak
+  pkgs.vesktop
+  pkgs.tree
+  pkgs.killall
   ];
 
   fonts.packages = with pkgs; [

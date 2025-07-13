@@ -13,6 +13,10 @@
   networking.hostName = "nixos"; # Define your hostname.
  
   networking.networkmanager.enable = true; # Enable Networking
+  
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
 
   time.timeZone = "Asia/Kolkata"; # Set your Timezone.
 
@@ -129,6 +133,7 @@
   pkgs.vesktop
   pkgs.tree
   pkgs.killall
+  pkgs.nwg-look
   ];
 
   fonts.packages = with pkgs; [

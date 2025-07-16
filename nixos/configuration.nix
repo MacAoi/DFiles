@@ -14,8 +14,10 @@
  
   networking.networkmanager.enable = true; # Enable Networking
   
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
+  hardware.bluetooth = {
+       enable = true;
+       powerOnBoot = true;
+  };
   services.blueman.enable = true;
 
   time.timeZone = "Asia/Kolkata"; # Set your Timezone.
@@ -62,7 +64,11 @@
 
  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  services.displayManager.sddm.enable=true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.autoLogin = {
+     enable = true;
+     user = "MacAoi";
+  };
   services.asusd.enable = true;
   services.xserver.enable = true;
 
